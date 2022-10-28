@@ -28,9 +28,9 @@ TEMPLATES = [
 ]
 ```
 
-y ademas cree una carpeta dentro de "proj"
+y además cree una carpeta dentro de "proj"
 
-En el mismo archivo, agregar la aplicacion
+En el mismo archivo, agregar la aplicación
 
 ```python
 INSTALLED_APPS = [
@@ -125,3 +125,6 @@ python .\manage.py runserver
 ```
 
 E ir a la ruta indica en urls http://localhost:8000/person/listar para probar el ejemplo
+
+
+

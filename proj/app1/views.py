@@ -7,5 +7,8 @@ from app1.models import Person
 # Create your views here.
 def listar_person(request):
     personas=Person.objects.all()  # estoy trayendo todas las filas de la tabla persona
-
+    print(personas)
     return render(request,'listar_person.html',{"personas":personas})
+
+def home(request):
+    return render(request,'home.html')
