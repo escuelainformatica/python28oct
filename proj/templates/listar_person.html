@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Listado</h1>
+
+<ul>
+    {% for person in personas %}
+    <li>{{person.first_name}}, {{person.last_name}} {{person.edad}}</li>
+
+    {% endfor %}
+</ul>
+
+</body>
+</html>
