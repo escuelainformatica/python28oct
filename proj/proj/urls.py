@@ -21,5 +21,10 @@ from app1 import views
 urlpatterns = [
     path('',views.listar_person),
     path('admin/', admin.site.urls),
-    path('person/listar',views.listar_person)
+    path('person/listar',views.listar_person),
+    path('pais/listar',views.listar_pais),
+    path('person/insertar',views.formulario_person),
+    path('pais/insertar',views.pais_insertar),
+    path('pais/actualizar/<int:idpais>/',views.pais_actualizar),
+    path('pais/borrar/<int:idpais>/',views.pais_borrar),
 ]

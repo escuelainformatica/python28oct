@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Listar paises</h1>
+  <table border="1">
+    <tr>
+      <td>id</td>
+      <td>nombre</td>
+      <td>actualizar</td>
+      <td>borrar</td>
+    </tr>
+    {% for pais in paises %}
+      <tr>
+      <td>{{pais.id}}</td>
+      <td>{{pais.nombre}}</td>
+        <td><a href="/pais/actualizar/{{pais.id}}">actualizar</a></td>
+        <td><a href="/pais/borrar/{{pais.id}}">borrar</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <a href="/pais/insertar">Insertar</a>
+
+</body>
+</html>

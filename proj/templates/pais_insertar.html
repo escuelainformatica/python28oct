@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Insertar Pais</h1>
+    <form method="post">
+         {% csrf_token %}
+        Id:{{pais.id}}<br>
+        Nombre:<input type="text" name="nombre" value="{{pais.nombre}}" /><br>
+        <input type="submit" name="boton" value="Agregar Pais"><br>
+    </form>
+
+</body>
+</html>

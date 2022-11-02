@@ -127,4 +127,43 @@ python .\manage.py runserver
 E ir a la ruta indica en urls http://localhost:8000/person/listar para probar el ejemplo
 
 
+## operaciones de la base de datos
 
+### listar todos los valores
+
+```python
+objs=Modelo.objects.all()
+```
+
+### obtener un valor usando la llave primaria (id)
+
+```python
+obj=Modelo.objects.get(id=999) 
+```
+
+### insertar un valor
+
+```python
+obj=Modelo()  # se crea una variable del tipo Modelo correspondiente
+obj.campo="aaa"
+obj.campo2=222
+
+obj.save()  # insertar el valor. Si el campo id es espeficicado entonces se actualizar.
+```
+
+### actualizar un valor
+
+```python
+obj=Modelo.objects.get(id=999)  # se lee un modelo desde la base de datos donde el id es igual a 9999
+obj.campo="aaa"
+obj.campo2=222
+
+obj.save()  # esto actualiza el modelo. El campo id no puede ser None
+```
+
+### borrar un valor
+
+```python
+obj=Modelo.objects.get(id=999)  # se lee un modelo desde la base de datos donde el id es igual a 9999
+obj.delete() # borro el objeto
+```

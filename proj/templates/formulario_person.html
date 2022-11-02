@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        first_name: <input type="text" name="first_name" value="{{persona.first_name}}" /><br>
+        last_name: <input type="text" name="last_name" value="{{persona.last_name}}" /><br>
+        edad: <input type="text" name="edad" value="{{persona.edad}}" /><br>
+        <input type="submit" name="boton" value="Insertar nueva persona"><br>
+
+    </form>
+
+
+</body>
+</html>
